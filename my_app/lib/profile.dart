@@ -14,6 +14,34 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        drawer: Drawer(
+          backgroundColor: Colors.grey[800],
+          child: ListView(
+            children: [
+              ListTile(
+                iconColor: Colors.grey,
+                textColor: Colors.grey,
+                leading: Icon(Icons.home),
+                title: Text('HOME', style: TextStyle(letterSpacing: 2.0)),
+                onTap: () {},
+              ),
+              ListTile(
+                iconColor: Colors.grey,
+                textColor: Colors.grey,
+                leading: Icon(Icons.info),
+                title: Text('ABOUT US', style: TextStyle(letterSpacing: 2.0)),
+                onTap: () {},
+              ),
+              ListTile(
+                iconColor: Colors.grey,
+                textColor: Colors.grey,
+                leading: Icon(Icons.logout),
+                title: Text('LOG OUT', style: TextStyle(letterSpacing: 2.0)),
+                onTap: () {},
+              ),
+            ],
+          ),
+        ),
         backgroundColor: Colors.grey[900],
         appBar: AppBar(
           title: Text("Profile", style: TextStyle(fontWeight: FontWeight.bold)),

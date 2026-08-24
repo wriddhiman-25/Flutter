@@ -19,9 +19,25 @@ class NotificationPage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(20.0, 30.0, 30.0, 0.0),
-        child: Container(
-          color: Colors.amber,
-          child: Text('You have 3 notifications '),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Container(
+              color: Colors.amber,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
+                child: Text('You have 3 notifications yet to see'),
+              ),
+            ),
+            SizedBox(height: 20),
+            Container(
+              color: Colors.amber,
+              child: Padding(
+                padding: const EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 0.0),
+                child: Text('User24 liked your post'),
+              ),
+            ),
+          ],
         ),
       ),
     );
