@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/home_page.dart';
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
@@ -14,6 +15,7 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        //Drawer
         drawer: Drawer(
           backgroundColor: Colors.grey[800],
           child: ListView(
@@ -23,7 +25,13 @@ class _ProfilePageState extends State<ProfilePage> {
                 textColor: Colors.grey,
                 leading: Icon(Icons.home),
                 title: Text('HOME', style: TextStyle(letterSpacing: 2.0)),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const HomePage()),
+                  );
+                },
               ),
               ListTile(
                 iconColor: Colors.grey,
