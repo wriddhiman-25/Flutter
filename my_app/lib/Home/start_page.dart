@@ -92,6 +92,9 @@ class _StartPageState extends State<StartPage> {
         ),
         body: pages[currentIndex],
         bottomNavigationBar: NavigationBar(
+          labelTextStyle: WidgetStateProperty.all(
+            TextStyle(color: Colors.grey),
+          ),
           onDestinationSelected: (value) {
             setState(() {
               currentIndex = value;
@@ -103,14 +106,17 @@ class _StartPageState extends State<StartPage> {
             NavigationDestination(
               icon: Icon(Icons.home_outlined),
               label: 'Home',
+              selectedIcon: Icon(Icons.home),
             ),
             NavigationDestination(
               icon: Icon(Icons.favorite_border_outlined),
               label: 'Favorites',
+              selectedIcon: Icon(Icons.favorite),
             ),
             NavigationDestination(
               icon: Icon(Icons.person_2_outlined),
               label: 'Profile',
+              selectedIcon: Icon(Icons.person_2),
             ),
           ],
         ),
