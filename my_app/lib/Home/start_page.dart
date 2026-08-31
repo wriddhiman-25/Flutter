@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:my_app/NavigationBar/favorites_page.dart';
 import 'package:my_app/NavigationBar/home_page.dart';
 import 'package:my_app/NavigationBar/profile_page.dart';
+import 'package:my_app/drawer/messages.dart';
 
 class StartPage extends StatefulWidget {
   const StartPage({super.key});
@@ -37,6 +38,12 @@ class _StartPageState extends State<StartPage> {
                 textColor: Colors.grey,
                 leading: Icon(Icons.message),
                 title: Text('Messages', style: TextStyle(letterSpacing: 1.0)),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MessagePage()),
+                  );
+                },
               ),
               ListTile(
                 iconColor: Colors.grey,
